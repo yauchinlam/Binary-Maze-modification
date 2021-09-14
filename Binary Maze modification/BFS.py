@@ -1,15 +1,6 @@
+from Point import Point
+from queueNode import queueNode
 from collections import deque
-
-class Point:
-    def __init__(self,x: int, y: int):
-        self.x = x
-        self.y = y
-
-class queueNode:
-    def __init__(self,pt: Point, dist: int):
-        self.pt = pt
-        self.dist = dist
-
 
 def isValid(row: int, col: int, mat: list):
     COL = len(mat[0]) 
@@ -53,14 +44,5 @@ def BFS(mat, src: Point, dest: Point, val: int):
                 q.append(Adjcell)
     
     return -1
-def FindDestination(mat, val:int):
-    dest=[(index, row.index(val)) for index, row in enumerate(mat) if val in row]
-    return Point(dest[0][0],dest[0][1])
 
-#Can accept user input but test case used here
-mat=[[1,1,0],[0,1,0],[9,1,0]]
-#mat = input()
-source = Point(0,0)
-dest = FindDestination(mat, 9)
-dist = BFS(mat,source,dest, 9)
-print(dist)
+
