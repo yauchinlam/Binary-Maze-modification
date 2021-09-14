@@ -8,6 +8,7 @@ def FindDestination(mat, val:int):
     return Point(dest[0][0],dest[0][1])
 
 #Can accept user input but test case used here
+#create unit tests to verify it working
 mat=[[1,1,0],[0,1,0],[9,1,0]]
 #mat = input()
 source = Point(0,0)
